@@ -1,0 +1,41 @@
+import search_contact as search
+import enter_contact as enter
+
+file_name = "d://phonebook.txt"
+file1 = open(file_name, "a+")
+file1.close
+
+def menu():
+    print("\n   ******** Phone Book Menu ********\n"+
+          "------------------------------------------\n"+
+          "Enter 1,2,3 or 4:\n"+
+          "Enter 2 To Add a New Contact Record\n"+
+          "Enter 3 To search your contacts\n"+
+          "Enter 4 To Quit\n**********************")
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        file_name = "d://phonebook.txt"
+        file1 = open(file_name, "r+")
+        file_contents = file1.read()
+        if len(file_contents) == 0:
+            print("Phone Book is empty")
+        else:
+            print (file_contents)
+        file1.close
+        ent = input("Press Enter to continue ...")
+        menu()
+    elif choice == "2":
+        enter.enter_contact_information()
+        ent = input("Press Enter to continue ...")
+        menu()
+    elif choice == "3":
+        search.search_contact_record()
+        ent = input("Press Enter to continue ...")
+        menu()
+    elif choice== "4":
+        print("\nGoodbye, come again :D")
+    else:
+        print("Wrong choice, Please Enter [1 to 4]\n")
+        ent = input("Press Enter to continue ...")
+        menu()
+menu()
