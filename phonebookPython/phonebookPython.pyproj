@@ -21,6 +21,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="console_cleaning.py" />
+    <Compile Include="delete_contact.py" />
     <Compile Include="enter_contact.py" />
     <Compile Include="input_name.py" />
     <Compile Include="input_surname.py" />

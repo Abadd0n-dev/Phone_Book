@@ -2,12 +2,11 @@ from input_name import input_fname
 from input_surname import input_lname
 
 #Данная функция собирает информацию
-def enter_contact_information():
-    
+def enter_contact_information():   
     first = input_fname()
     last = input_lname()
     phone = input('Enter Phone number ')
-    email = input('Enter E-mail ')
+    email = input('Enter E-mail ')    
     contact = ("[" + first + " " + last + ", " + phone + ", " + email +  "]\n")
     file_name = "d://phonebook.txt"
     file1 = open(file_name, "a")
