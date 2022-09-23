@@ -1,7 +1,6 @@
 from input_name import input_fname
 from input_surname import input_lname
 
-#Данная функция собирает информацию
 def enter_contact_information():   
     first = input_fname()
     last = input_lname()

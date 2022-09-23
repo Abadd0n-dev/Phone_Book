@@ -1,4 +1,3 @@
-#Функция выполняет поиск контактов
 def search_contact_record():
     search_name = input("Enter First name for Searching contact record: ")
     rem_name = search_name[1:]
