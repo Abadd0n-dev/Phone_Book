@@ -7,7 +7,7 @@ def enter_contact_information():
     phone = input('Enter Phone number ')
     email = input('Enter E-mail ')    
     contact = ("[" + first + " " + last + ", " + phone + ", " + email +  "]\n")
-    file_name = "d://phonebook.txt"
+    file_name = "phonebook.txt"
     file1 = open(file_name, "a")
     file1.write(contact)
     print( "This contact\n " + contact + "has been added successfully!")

@@ -1,11 +1,8 @@
+import get_contact as contact
 import search_contact as search
 import enter_contact as enter
 import console_cleaning as cleaningC
 import delete_contact as deleteC
-
-file_name = "d://phonebook.txt"
-file1 = open(file_name, "a+")
-file1.close
 
 def menu():
     print("\n   ******** Phone Book Menu ********\n"+
@@ -19,14 +16,11 @@ def menu():
           "Enter 6 To Quit\n**********************")
     choice = input("Enter your choice: ")
     if choice == "1":
-        file_name = "d://phonebook.txt"
-        file1 = open(file_name, "r+")
-        file_contents = file1.read()
-        if len(file_contents) == 0:
+        if len(contact.file_contents) == 0:
             print("Phone Book is empty")
         else:
-            print (file_contents)
-        file1.close
+            print (contact.file_contents)
+        contact.file_contents.close
         ent = input("Press Enter to continue ...")
         menu()
     elif choice == "2":

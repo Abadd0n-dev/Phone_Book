@@ -1,14 +1,13 @@
+import get_contact as contact
+
 def search_contact_record():
     search_name = input("Enter First name for Searching contact record: ")
     rem_name = search_name[1:]
     first_char = search_name[0]
     search_name = first_char.upper() + rem_name
-    file_name = "d://phonebook.txt"
-    file1 = open(file_name, "r+")
-    file_contents = file1.readlines()
-     
+    contact.file_contents   
     found = False   
-    for line in file_contents:
+    for line in contact.file_contents:
         if search_name in line:
             print("Your Required Contact Record is:", end=" ")
             print (line)

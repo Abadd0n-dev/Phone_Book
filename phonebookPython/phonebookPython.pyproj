@@ -11,7 +11,8 @@
     <OutputPath>.</OutputPath>
     <Name>phonebookPython</Name>
     <RootNamespace>phonebookPython</RootNamespace>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>
+    </InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,6 +24,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="console_cleaning.py" />
+    <Compile Include="get_contact.py" />
     <Compile Include="delete_contact.py" />
     <Compile Include="enter_contact.py" />
     <Compile Include="input_name.py" />
@@ -30,17 +32,6 @@
     <Compile Include="phonebookPython.py" />
     <Compile Include="phonebook_bot.py" />
     <Compile Include="search_contact.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <Interpreter Include="env\">
-      <Id>env</Id>
-      <Version>3.10</Version>
-      <Description>env (Python 3.10 (64-bit))</Description>
-      <InterpreterPath>Scripts\python.exe</InterpreterPath>
-      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X64</Architecture>
-    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
